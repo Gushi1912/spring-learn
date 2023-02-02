@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="userDao" class="com.gushi.sb.dao.impl.UserDaoImpl" >
+        <constructor-arg name="name" value="gugugu"/>
+        <constructor-arg name="age" value="123"/>
+    </bean>
+
+    <bean id="userService1" class="com.gushi.sb.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+
+
+    <bean id="userService2" class="com.gushi.sb.factory.StaticUserServiceFactory" factory-method="getUserService">
+        <constructor-arg name="height" value="172"/>
+    </bean>
+
+    <bean id="instanceUserServiceFactory" class="com.gushi.sb.factory.InstanceUserServiceFactory"/>
+    <bean id="userService3" factory-bean="instanceUserServiceFactory" factory-method="getUserService"/>
+
+    <bean id="userService4" class="com.gushi.sb.factory.MyFactoryBean" />
+</beans>
