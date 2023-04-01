@@ -3,6 +3,7 @@ package com.gushi.sb;
 import com.gushi.sb.dao.UserDao;
 import com.gushi.sb.service.UserService;
 import com.gushi.sb.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 

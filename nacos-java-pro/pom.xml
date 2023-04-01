@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>nacos-java-test</name>
-    <artifactId>nacos-java-test</artifactId>
+    <artifactId>nacos-java-pro</artifactId>
 
     <build>
 

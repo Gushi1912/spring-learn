@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 
 
     public void setUserDao(UserDao userDao) {
-//        this.userDao = userDao;
+        this.userDao = userDao;
         System.out.println("UserServiceImpl | 设置属性值");
     }
 
